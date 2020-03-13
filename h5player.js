@@ -5833,8 +5833,9 @@
                 });
                 var decryptkey = parser.lib.WordArray.create(new Uint8Array(i.decryptdata.key)).toString(parser.enc.Utf8),
                 decryptkey_bytes_string = dec.dec(decryptkey, i.decryptdata._lid.replace(/_\d*/, ""));
-				var s = 'N_m3u8DL-CLI_v2.6.0.exe "' + edu_h5_player.config.dispatch[0].url.replace('https','http') + '" --saveName '+$('li.lesson.cur>a>*').slice(0,2).text()+' --useKeyBase64 "'+btoa(decryptkey_bytes_string)+'" --enableDelAfterDone ';
-                prompt(s);//"decryptkey_base64_string",btoa(decryptkey_bytes_string));
+		var s = 'N_m3u8DL-CLI_v2.6.0.exe "' + edu_h5_player.config.dispatch[0].url.replace('https','http') + '" --saveName '+$('li.lesson.cur>a>*').slice(0,2).text()+' --useKeyBase64 "'+btoa(decryptkey_bytes_string)+'" --enableDelAfterDone ';
+                prompt('命令 参数',s);//"decryptkey_base64_string",btoa(decryptkey_bytes_string));
+		console.log(s);
             }
             ,
             e.prototype.loaderror = function(e, t) {
